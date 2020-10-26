@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main-container">
+    <div class="header-nav">
+      <button @click="currentComponent = 'Home'">home</button>
+      <button @click="currentComponent = 'About'">about</button>
+      <button @click="currentComponent = 'Skills'">skills</button>
+      <button>portfolio</button>
+      <button>contact</button>
+      <component :is="currentComponent"></component>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Home from "./components/Home.vue"
+// import HeaderNav from "./components/HeaderNav.vue"
+import About from "./components/About.vue"
+import Skills from "./components/Skills.vue"
 export default {
-  name: 'App',
+  data() {
+    return {
+      currentComponent: "Home"
+    }
+  },
   components: {
-    HelloWorld
+    Home,
+    About,
+    Skills
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

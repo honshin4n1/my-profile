@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div class="container">
     <div class="header-nav">
       <button @click="currentComponent = 'Home'">home</button>
       <button @click="currentComponent = 'About'">about</button>

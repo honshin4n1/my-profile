@@ -1,15 +1,15 @@
 <template>
   <div class="container">
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
     <HeaderNav></HeaderNav>
-    <router-view></router-view>
   </div>
 </template>
 
 <script>
-// import Home from "./components/Home.vue"
 import HeaderNav from "./components/HeaderNav.vue"
-// import About from "./components/About.vue"
-// import Skills from "./components/Skills.vue"
+
 export default {
   data() {
     return {
@@ -22,22 +22,30 @@ export default {
 }
 </script>
 
-<style>
-  * {
-    box-sizing: border-box;
-  }
-  html, body {
-    height: 100%;
-    width: 100%;
-  }
-  .container {
-    height: 100%;
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
-  }
-  .title {
-  text-align: center;
+<style scoped>
+* {
+  box-sizing: border-box;
+}
+html, body {
+  min-height: 100vh;
+  width: 100%;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.title {
+text-align: center;
+width: 100%;
+height: 100%;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
 }
 
 </style>

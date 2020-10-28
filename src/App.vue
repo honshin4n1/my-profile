@@ -1,35 +1,51 @@
 <template>
   <div class="container">
-    <div class="header-nav">
-      <button @click="currentComponent = 'Home'">home</button>
-      <button @click="currentComponent = 'About'">about</button>
-      <button @click="currentComponent = 'Skills'">skills</button>
-      <button>portfolio</button>
-      <button>contact</button>
-      <component :is="currentComponent"></component>
-    </div>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+    <HeaderNav></HeaderNav>
   </div>
 </template>
 
 <script>
-import Home from "./components/Home.vue"
-// import HeaderNav from "./components/HeaderNav.vue"
-import About from "./components/About.vue"
-import Skills from "./components/Skills.vue"
+import HeaderNav from "./components/HeaderNav.vue"
+
 export default {
   data() {
     return {
-      currentComponent: "Home"
+      
     }
   },
   components: {
-    Home,
-    About,
-    Skills
+    HeaderNav
   }
 }
 </script>
 
-<style>
+<style scoped>
+* {
+  box-sizing: border-box;
+}
+html, body {
+  min-height: 100vh;
+  width: 100%;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.title {
+text-align: center;
+width: 100%;
+height: 100%;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
 
 </style>

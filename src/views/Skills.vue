@@ -8,23 +8,10 @@
 </template>
 
 <style scoped>
-* {
-  box-sizing: border-box;
-}
-html, body {
-  height: 100%;
-  width: 100%;
-}
-.container {
+.main {
   height: 100%;
   width: 80%;
   margin: 0 auto;
-  position: relative;
-}
-.title {
-text-align: center;
-width: 100%;
-height: 100%;
 }
 
 </style>

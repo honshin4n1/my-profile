@@ -1,5 +1,5 @@
 <template>
-  <nav class="animate__animated animate__bounceInDown nav">
+  <nav class="nav">
     <div class="nav-link">
       <router-link to="/" class="link" active-class="link--active" exact>Home</router-link>
     </div>

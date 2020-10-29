@@ -20,18 +20,6 @@ export default {
 </script>
 
 <style scoped>
-* {
-  box-sizing: border-box;
-}
-html, body {
-  height: 100%;
-  width: 100%;
-}
-.container {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
 .contact {
   height: 100%;
   width: 100%;
@@ -41,10 +29,4 @@ html, body {
   width: 80%;
   margin: 0 auto;
 }
-.title {
-text-align: center;
-width: 100%;
-height: 100%;
-}
-
 </style>

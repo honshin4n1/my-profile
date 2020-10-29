@@ -1,40 +1,42 @@
 <template>
-  <div class="main">
-    <div class="title">
-      <h1>SHINICHI HONDA</h1>
-      <div class="img-box animate__animated animate__backInUp">
-        <img src="@/assets/IMG_0548-cutout.png" alt="img">
-      </div>
-      <transition name="fade" appear>
-        <h3>Thank you for visiting!!</h3>
-      </transition>
+  <div class="home">
+    <div class="home-title">
+      <h1>
+        <vue-typer :text="NameText" :repeat="0" :pre-type-delay ="1000"></vue-typer>
+      </h1>
+      <h3>
+        <vue-typer :text="ThanksText" :repeat="0" :pre-type-delay ="2300"></vue-typer>
+      </h3>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      NameText: 'SHINICHI HONDA',
+      ThanksText: 'Thank you for visiting!!'
+    }
+  }
+}
+</script>
+
+
 <style scoped>
-* {
-  box-sizing: border-box;
-}
-html, body {
-  height: 100%;
+.home {
+  height: 100vh;
   width: 100%;
-}
-.container {
-  height: 100%;
-  width: 80%;
-  margin: 0 auto;
+  background: radial-gradient(#ffffff, #708090);
   position: relative;
 }
-.main {
-  height: 100%;
-  width: 80%;
-  margin: 0 auto;
-}
-.title {
-text-align: center;
-width: 100%;
-height: 100%;
+.home-title {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 30%;
+  left: 20%;
 }
 .fade-enter{
   opacity: 0;
@@ -45,14 +47,13 @@ height: 100%;
 .fade-enter-to{
   opacity: 1;
 }
-
-.img-box {
-  /* width: 100%;
-  height: 100%; */
-}
-img {
-  width: 30%;
-  height: 30%;
+@media (max-width: 500px) {
+  h1 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 16px;
+  }
 }
 </style>
 

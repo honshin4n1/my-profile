@@ -6,23 +6,23 @@
     </div>
     <div class="prof-flex">
       <div class="prof-img">
-        <img src="@/assets/myimg.jpeg" alt="">
+        <img src="@/assets/images/myimg.jpeg" alt="顔写真">
       </div>
       <div class="prof-text">
-        <div class="text-title">
-          <p style="width: 150px;">名前</p>
+        <div class="text-group">
+          <p style="width: 130px;">名前</p>
           <p>本田 慎一</p>
         </div>
-        <div class="text-title">
-          <p style="width: 150px;">生年月日</p>
+        <div class="text-group">
+          <p style="width: 130px;">生年月日</p>
           <p>1983/7/5 (37歳)</p>
         </div>
-        <div class="text-title">
-          <p style="width: 150px;">現住所</p>
+        <div class="text-group">
+          <p style="width: 130px;">現住所</p>
           <p>福岡市</p>
         </div>
-        <div class="text-title">
-          <p style="width: 150px;">趣味</p>
+        <div class="text-group">
+          <p style="width: 130px;">趣味</p>
           <p>映画 漫画 カラオケ サッカー視聴</p>
         </div>
         <!-- <div class="text-body">
@@ -31,7 +31,7 @@
     </div>
     <div>
       <transition name="fade" appear>
-        <p style="line-height: 200%">
+        <p class="description" style="line-height: 200%">
         専門学校卒業後から、音楽活動を軸に生活を送っていました。音楽の道を諦める決心をした後は、代わりに打ち込めることを仕事し
         たいと感じ、色々な仕事を調べるようになりました。そんな時、プログラミングに関するサイトやブログ記事から努力次第で市場値
         のあるスキルを身につけられるプログラミングに興味を持ち、書籍やProgate、ドットインストールなどでの学習を始めました。
@@ -61,58 +61,64 @@
 .main {
   height: 100%;
   width: 80%;
-  margin: 0 auto;
+  margin: auto;
 }
 p {
   font-size: 20px;
   color: darkgrey;
-}
-
-* {
-  box-sizing: border-box;
-}
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
-.container {
-  height: 100%;
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-.title {
-text-align: center;
-width: 100%;
-height: 100%;
 }
 .prof-flex {
   display: flex;
   justify-content: flex-start;
   margin-top: 100px;
 }
-img {
+.prof-img {
   width: 200px;
   height: auto;
   margin-left: 50px;
 }
+img {
+  width: 200px;
+  height: auto;
+}
 .prof-text {
-  /* display: flex; */
   margin-left: 50px;
 }
-.text-title {
+.text-group {
   display: flex;
 }
 .text-body {
   margin-left: 50px;
 }
+.description {
+  width: 100%;
+  margin: 70px 0;
+  padding-bottom: 100px;
+}
 @media (max-width: 940px) {
   .prof-flex {
     flex-direction: column;
+    margin-top: 50px;
   }
   .main {
     width: 90%;
+  }
+  .prof-img {
+    margin: 0 auto;
+  }
+  .prof-text {
+    margin: 0 auto;
+  }
+  
+}
+@media (max-width: 500px) {
+  p {
+    width: 200px;
+    font-size: 16px;
+  }
+  .description {
+    width: 100%;
+    margin: 70px 0;
   }
 }
 </style>

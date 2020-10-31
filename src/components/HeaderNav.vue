@@ -32,6 +32,7 @@ export default {
   justify-content: center;
   background-color: #fff;
   margin: auto;
+  border-radius: 4px;
   position: fixed;
   left: 20%;
   bottom: 50px;

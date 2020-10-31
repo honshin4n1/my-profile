@@ -49,15 +49,6 @@
 </template>
 
 <style scoped>
-.fade-enter{
-  opacity: 0;
-}
-.fade-enter-active{
-  transition: 1s;
-}
-.fade-enter-to{
-  opacity: 1;
-}
 .main {
   height: 100%;
   width: 80%;

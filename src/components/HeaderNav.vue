@@ -1,5 +1,5 @@
 <template>
-  <nav class="animate__animated animate__bounceInDown nav">
+  <nav class="nav">
     <div class="nav-link">
       <router-link to="/" class="link" active-class="link--active" exact>Home</router-link>
     </div>
@@ -32,6 +32,7 @@ export default {
   justify-content: center;
   background-color: #fff;
   margin: auto;
+  border-radius: 4px;
   position: fixed;
   left: 20%;
   bottom: 50px;

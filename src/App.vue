@@ -11,35 +11,28 @@
 import HeaderNav from "./components/HeaderNav.vue"
 
 export default {
-  data() {
-    return {
-      
-    }
-  },
   components: {
     HeaderNav
   }
 }
 </script>
 
-<style scoped>
+<style>
 * {
   box-sizing: border-box;
 }
 html, body {
   min-height: 100vh;
   width: 100%;
+  margin: 0;
 }
 .container {
   height: 100%;
   width: 100%;
-  margin: 0 auto;
   position: relative;
 }
 .title {
-text-align: center;
-width: 100%;
-height: 100%;
+  text-align: center;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
@@ -47,5 +40,4 @@ height: 100%;
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s;
 }
-
 </style>

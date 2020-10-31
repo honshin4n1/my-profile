@@ -1,30 +1,34 @@
 <template>
 <div class="main">
   <div class="title">
-    <h1 class="animate__animated animate__backInUp"><font-awesome-icon icon="graduation-cap"></font-awesome-icon></h1>
+    <h1><font-awesome-icon icon="graduation-cap"></font-awesome-icon></h1>
     <h1>Skills</h1>
   </div>
+  <Languages></Languages>
+  <Frameworks></Frameworks>
+  <Others></Others>
 </div>
 </template>
 
+<script>
+import Languages from "./Languages.vue";
+import Frameworks from "./Frameworks.vue";
+import Others from "./Others.vue";
+
+export default {
+  components: {
+    Languages,
+    Frameworks,
+    Others
+  }
+}
+</script>
+
 <style scoped>
-* {
-  box-sizing: border-box;
-}
-html, body {
-  height: 100%;
-  width: 100%;
-}
-.container {
+.main {
   height: 100%;
   width: 80%;
   margin: 0 auto;
-  position: relative;
-}
-.title {
-text-align: center;
-width: 100%;
-height: 100%;
 }
 
 </style>

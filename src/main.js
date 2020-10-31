@@ -6,10 +6,11 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VueTyperPlugin from 'vue-typer'
 
 
-library.add(fas, fab, far)
-
+library.add(fab, far, fas)
+Vue.use(VueTyperPlugin)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false

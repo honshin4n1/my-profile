@@ -1,13 +1,19 @@
 <template>
   <div class="voicememo">
-    <a href="https://www.myvoicememo.com/" target="_blank">
-      <img src="@/assets/images/VoiceMemo.png" alt="voicememo">
-    </a>
-    <p><a href="https://www.myvoicememo.com/" target="_blank">Voice Memo</a></p>
-    <p class="tool">Ruby on Rails + AWS</p>
     <a href="https://github.com/honshin4n1/voice_memo_app" target="_blank"> 
+      <div class="explanation">
+        <p class="explanation-text">手軽に使えるメモアプリです。</p>
+        <p class="explanation-text">Web Speech APIによりChrome環境では音声入力が可能</p>
+        <p class="explanation-text">Ruby on Railsを使用し作成。</p>
+        <p class="explanation-text">インフラにはAWSを用いてデプロイしています。</p>
+        <p class="explanation-text">詳細はGitHubに掲載しています。</p>
+        <p class="explanation-text">是非ご覧ください。（リンク先はGitHubです。）</p>
+      </div>
       <font-awesome-icon :icon="['fab', 'github']" class="github-icon"></font-awesome-icon>
     </a>
+    <img src="@/assets/images/VoiceMemo.png" alt="voicememo">
+    <p><a href="https://www.myvoicememo.com/" target="_blank">Voice Memo</a></p>
+    <p class="tool">Ruby on Rails + AWS</p>
   </div>
 </template>
 
@@ -48,6 +54,19 @@ p {
   font-size: 14px;
   color: darkgray;
 }
+.explanation {
+  width: 500px;
+  height: 273.95px;
+  background-color: black;
+  opacity: 0.8;
+  color: #fff;
+  position: absolute;
+  top: 0;
+}
+.explanation-text {
+  font-size: 18px;
+  color: darkgray;
+}
 
 @media (max-width: 650px) {
   .main {
@@ -63,20 +82,34 @@ p {
   }
   a {
   font-size: 20px;
-}
-.github-icon {
-  bottom: 20px;
-  right: 20px;
-  font-size: 30px;
-}
+  }
+  .github-icon {
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+  }
 
-p {
-  margin: 10px 20px;
-}
+  p {
+    margin: 10px 20px;
+  }
 
-.tool {
-  font-size: 14px;
-  color: darkgray;
-}
+  .tool {
+    font-size: 14px;
+    color: darkgray;
+  }
+  .explanation {
+    width: 300px;
+    height: 164.38px;
+    background-color: black;
+    opacity: 0.8;
+    color: #fff;
+    position: absolute;
+    top: 0;
+  }
+  .explanation-text {
+    font-size: 13px;
+    color: darkgray;
+    margin: 0 5px;
+  }
 }
 </style>

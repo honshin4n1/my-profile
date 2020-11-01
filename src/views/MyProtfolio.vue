@@ -1,7 +1,7 @@
 <template>
-  <div class="my-protfolio">
+  <div class="my-protfolio" @mouseover="MouseOver" @mouseleave="MouseLeave">
     <a href="https://github.com/honshin4n1/my-profile" target="_blank">
-      <div class="explanation">
+      <div class="explanation" v-if="hoverExplanation">
         <p class="explanation-text">訪問ありがとうございます。</p>
         <p class="explanation-text">現在ご覧いただいているサイトです。</p>
         <p class="explanation-text">Vue.jsを使用してSPAの自己紹介サイトを作成しました。</p>
@@ -14,6 +14,24 @@
     <p class="tool">Vue.js</p>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      hoverExplanation: false
+    }
+  },
+  methods: {
+    MouseOver() {
+      this.hoverExplanation = true
+    },
+    MouseLeave() {
+      this.hoverExplanation = false
+    }
+  }
+}
+</script>
 
 <style scoped>
 .my-protfolio {
@@ -62,6 +80,7 @@ p {
   position: absolute;
   top: 0;
 }
+
 .explanation-text {
   font-size: 18px;
   color: darkgray;

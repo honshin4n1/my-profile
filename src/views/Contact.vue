@@ -113,4 +113,12 @@ textarea {
 .info-enter-active, .info-leave-active {
   transition: opacity 5s;
 }
+button {
+  height: 30px;
+  width: 50px;
+  outline: none;
+  border: 1px solid darkgrey; 
+  border-radius: 4px;
+  background-color: darkseagreen;
+}
 </style>

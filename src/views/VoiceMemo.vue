@@ -1,14 +1,16 @@
 <template>
-  <div class="voicememo">
-    <a href="https://github.com/honshin4n1/voice_memo_app" target="_blank"> 
-      <div class="explanation">
-        <p class="explanation-text">手軽に使えるメモアプリです。</p>
-        <p class="explanation-text">Web Speech APIによりChrome環境では音声入力が可能</p>
-        <p class="explanation-text">Ruby on Railsを使用し作成。</p>
-        <p class="explanation-text">インフラにはAWSを用いてデプロイしています。</p>
-        <p class="explanation-text">詳細はGitHubに掲載しています。</p>
-        <p class="explanation-text">是非ご覧ください。（リンク先はGitHubです。）</p>
-      </div>
+  <div class="voicememo" @mouseover="MouseOver" @mouseleave="MouseLeave">
+    <a href="https://github.com/honshin4n1/voice_memo_app" target="_blank">
+      <transition name="slide">
+        <div class="explanation" v-if="hoverExplanation">
+          <p class="explanation-text">手軽に使えるメモアプリです。</p>
+          <p class="explanation-text">Web Speech APIによりChrome環境では音声入力が可能</p>
+          <p class="explanation-text">Ruby on Railsを使用し作成。</p>
+          <p class="explanation-text">インフラにはAWSを用いてデプロイしています。</p>
+          <p class="explanation-text">詳細はGitHubに掲載しています。</p>
+          <p class="explanation-text">是非ご覧ください。（リンク先はGitHubです。）</p>
+        </div>
+      </transition>
       <font-awesome-icon :icon="['fab', 'github']" class="github-icon"></font-awesome-icon>
     </a>
     <img src="@/assets/images/VoiceMemo.png" alt="voicememo">
@@ -17,7 +19,42 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      hoverExplanation: false
+    }
+  },
+  methods: {
+    MouseOver() {
+      this.hoverExplanation = true
+    },
+    MouseLeave() {
+      this.hoverExplanation = false
+    }
+  }
+}
+</script>
+
 <style scoped>
+
+/* .slide-enter-active {
+  animation: slide-in 0.3s;
+}
+.slide-leave-active {
+  animation: slide-in 0.5s reverse;  
+}
+@keyframes slide-in {
+  from {
+    height: 0;
+    transform: height 0.3;
+  }
+  to {
+    transform: translateX(0);
+  }
+} */
+
 .voicememo {
   width: 500px;
   height: 370px;

@@ -2,10 +2,10 @@
   <div class="home">
     <div class="home-title">
       <h1>
-        <vue-typer :text="NameText" :repeat="0" :pre-type-delay ="1000"></vue-typer>
+        <vue-typer :text="NameText" :repeat="0" :pre-type-delay ="700"></vue-typer>
       </h1>
       <h3>
-        <vue-typer :text="ThanksText" :repeat="0" :pre-type-delay ="2300"></vue-typer>
+        <vue-typer :text="ThanksText" :repeat="0" :pre-type-delay ="1800"></vue-typer>
       </h3>
     </div>
   </div>

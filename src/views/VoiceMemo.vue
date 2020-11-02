@@ -39,21 +39,21 @@ export default {
 
 <style scoped>
 
-/* .slide-enter-active {
-  animation: slide-in 0.3s;
+.slide-enter-active {
+  animation: slide-in 0.3s; 
 }
 .slide-leave-active {
-  animation: slide-in 0.5s reverse;  
+  animation: slide-in 0.3s reverse; 
 }
 @keyframes slide-in {
   from {
     height: 0;
-    transform: height 0.3;
+    transform: height 0.2;
   }
   to {
-    transform: translateX(0);
+    height: 273.95px;
   }
-} */
+}
 
 .voicememo {
   width: 500px;
@@ -99,6 +99,7 @@ p {
   color: #fff;
   position: absolute;
   top: 0;
+  overflow: hidden;
 }
 .explanation-text {
   font-size: 18px;
@@ -147,6 +148,15 @@ p {
     font-size: 13px;
     color: darkgray;
     margin: 0 5px;
+  }
+  @keyframes slide-in {
+    from {
+      height: 0;
+      transform: height 0.2;
+    }
+    to {
+      height: 164.38px;
+    }
   }
 }
 </style>

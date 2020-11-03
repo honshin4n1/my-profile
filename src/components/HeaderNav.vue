@@ -55,7 +55,7 @@ export default {
     width: 100%;
     position: fixed;
     left: 0;
-    bottom: 10px;
+    bottom: 30px;
   }
 }
 

@@ -35,4 +35,18 @@ p {
   bottom: 0;
   left: 25%;
 }
+@media (max-width: 800px) {
+  p {
+    margin: 0;
+  }
+  .sns-icon-group {
+    width: 40%;
+    text-align: center;
+    top: 20px;
+    right: 15px;
+  }
+  .sns-icon {
+    font-size: 25px;
+  }
+}
 </style>

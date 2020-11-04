@@ -1,41 +1,39 @@
 <template>
   <div class="contact">
-    <transition name="info" appear>
+    <!-- <transition name="info" appear>
       <div class="contact-info">
         <h3>只今、メンテナンス中です。</h3>
       </div>
-    </transition>
+    </transition> -->
     <div class="main">
       <div class="title">
         <h1><font-awesome-icon icon="envelope"></font-awesome-icon></h1>
         <h1>Contact</h1>
       </div>
       <div class="contact-form">
-        <div class="form-box">
-          <form>
-            <div class="form-group">
-              <label for="name">名前</label>
-              <br>
-              <input id="name" type="text" v-model.lazy="contactData.name">
-              <p>{{contactData.name}}</p>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <br>
-              <input id="email" type="email" v-model.lazy="contactData.email">
-              <p>{{contactData.email}}</p>
-            </div>
-            <div class="form-group">
-              <label for="comment">内容</label>
-              <br>
-              <textarea id="comment" cols="30" rows="5" v-model.lazy="contactData.comment"></textarea>
-              <p>{{contactData.comment}}</p>
-            </div>
-            <div class="form-group">
-              <button type="submit">送信</button>
-            </div>
-          </form>
-        </div>
+        <form>
+          <div class="form-group">
+            <label for="name">名前</label>
+            <br>
+            <input id="name" type="text" v-model.lazy="contactData.name">
+            <p>{{contactData.name}}</p>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <br>
+            <input id="email" type="email" v-model.lazy="contactData.email">
+            <p>{{contactData.email}}</p>
+          </div>
+          <div class="form-group">
+            <label for="comment">内容</label>
+            <br>
+            <textarea id="comment" cols="30" rows="5" v-model.lazy="contactData.comment"></textarea>
+            <p>{{contactData.comment}}</p>
+          </div>
+          <div class="form-group">
+            <button type="submit">送信</button>
+          </div>
+        </form>
       </div>
     </div>
     <Footer></Footer>
@@ -71,7 +69,13 @@ export default {
   margin: 0 auto;
 }
 .contact-form {
-  width: 100%;
+  width: 80%;
+  margin: 50px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid darkgrey;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
 }
 .contact-info {
   height: 100%;
@@ -92,17 +96,19 @@ h3 {
   left: 25%;
 }
 .form-group {
-  width: 70%;
+  width: 60%;
   margin: auto;
 }
+
 input {
-  width: 60%;
+  width: 100%;
+  height: 40px;
   outline: none;
   padding: 5px;
   border: 1px solid darkgrey;
 }
 textarea {
-  width: 60%;
+  width: 100%;
   outline: none;
   padding: 5px;
   border: 1px solid darkgrey;
@@ -114,8 +120,8 @@ textarea {
   transition: opacity 5s;
 }
 button {
-  height: 30px;
-  width: 50px;
+  height: 40px;
+  width: 100%;
   outline: none;
   border: 1px solid darkgrey; 
   border-radius: 4px;

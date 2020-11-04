@@ -1,17 +1,17 @@
 <template>
   <div class="contact">
-    <!-- <transition name="info" appear>
+    <transition name="info" appear>
       <div class="contact-info">
         <h3>只今、メンテナンス中です。</h3>
       </div>
-    </transition> -->
+    </transition>
     <div class="main">
       <div class="title">
         <h1><font-awesome-icon icon="envelope"></font-awesome-icon></h1>
         <h1>Contact</h1>
       </div>
       <div class="contact-form">
-        <form>
+        <form name="contact" method="POST">
           <div class="form-group">
             <label for="name">名前</label>
             <br>
@@ -42,6 +42,8 @@
 
 <script>
 import Footer from "@/components/Footer.vue";
+// import axios from "axios";
+
 export default {
   data() {
     return {

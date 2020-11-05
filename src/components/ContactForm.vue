@@ -5,7 +5,7 @@
         <label for="name">名前:</label>
         <span v-if="$v.contactData.name.$error">必須項目です。入力されていません。</span>
         <br>
-        <input id="name" type="text" v-model="contactData.name" @blur="$v.contactData.name.$touch()" :class="{ error : $v.contactData.name.$error}">
+        <input name="name" id="name" type="text" v-model="contactData.name" @blur="$v.contactData.name.$touch()" :class="{ error : $v.contactData.name.$error}">
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
@@ -14,13 +14,13 @@
           <span v-if="!$v.contactData.email.email">形式が正しくありません。</span>
         </div>
         <br>
-        <input id="email" type="email" v-model="contactData.email" @blur="$v.contactData.email.$touch()" :class="{ error : $v.contactData.email.$error}">
+        <input name="email" id="email" type="email" v-model="contactData.email" @blur="$v.contactData.email.$touch()" :class="{ error : $v.contactData.email.$error}">
       </div>
       <div class="form-group">
         <label for="comment">内容:</label>
         <span v-if="$v.contactData.comment.$error">必須項目です。入力されていません。</span>
         <br>
-        <textarea id="comment" cols="30" rows="5" v-model="contactData.comment" @blur="$v.contactData.comment.$touch()" :class="{ error : $v.contactData.comment.$error}"></textarea>
+        <textarea name="comment" id="comment" cols="30" rows="5" v-model="contactData.comment" @blur="$v.contactData.comment.$touch()" :class="{ error : $v.contactData.comment.$error}"></textarea>
       </div>
       <div class="form-group">
         <button type="submit">送信</button>
@@ -31,8 +31,9 @@
 
 <script>
 import { required, email } from 'vuelidate/lib/validators';
+import axios from "axios";
+
 export default {
-  
   data() {
     return {
       contactData: {
@@ -57,12 +58,29 @@ export default {
     }
   },
   methods: {
+    encode (data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
     submitForm() {
       this.$v.$touch();
       if(this.$v.$invalid) {
         console.log('バリデーションエラー');
       }else{
-        console.log('submit');
+        const axiosConfig = {
+          header: { "Content-Type": "application/x-www-form-urlencoded" }
+        };
+        axios.post(
+        "/",
+        this.encode({
+          "form-name": "contact",
+          ...this.contactData
+        }),
+        axiosConfig
+      );
       }
     }
   }

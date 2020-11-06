@@ -1,6 +1,8 @@
 <template>
   <div class="contact-form">
-    <form @submit.prevent="submitForm" name="contact" method="POST" netlify>
+    <h3>お問い合わせ</h3>
+    <form ref="form" @submit.prevent="submitForm" name="contact" method="POST" netlify>
+      <input type="hidden" name="subject" value="subject" />
       <div class="form-group">
         <label for="name">名前:</label>
         <span v-if="$v.contactData.name.$error">必須項目です。入力されていません。</span>
@@ -37,6 +39,7 @@ export default {
   data() {
     return {
       contactData: {
+        subject: 'お問い合わせ',
         name: '',
         email: '',
         comment: ''
@@ -80,8 +83,17 @@ export default {
           ...this.contactData
         }),
         axiosConfig
-      );
+        )
+        .then(() => {
+          this.$refs.form.reset()
+          alert('お問い合わせありがとうございます。送信完了しました。')
+        })
+        .catch(error => {
+          console.log(error)
+          alert('送信に失敗しました。時間をおいて再度お試しください。')
+        })
       }
+      
     }
   }
 }
@@ -92,11 +104,15 @@ export default {
   width: 60%;
   height: 80%;
   margin: 50px auto;
-  padding-top: 50px;
   padding-bottom: 50px;
   border: 1px solid darkgrey;
   border-radius: 4px;
   box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+}
+
+h3 {
+  text-align: center;
+  margin: 30px 0;
 }
 
 .form-group {

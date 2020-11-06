@@ -10,6 +10,10 @@
         <h1><font-awesome-icon icon="envelope"></font-awesome-icon></h1>
         <h1>Contact</h1>
       </div>
+      <div class="infomation-text">
+        <p>ご覧いただいてありがとうございます。現在転職活動中です。</p>
+        <p>気になること、お手伝いできることがあれば、お気軽にお問合せください。</p>
+      </div>
       <ContactForm></ContactForm>
     </div>
     <Footer></Footer>
@@ -19,7 +23,7 @@
 <script>
 import ContactForm from "@/components/ContactForm.vue";
 import Footer from "@/components/Footer.vue";
-// import axios from "axios";
+
 
 export default {
   components: {
@@ -48,6 +52,23 @@ h3 {
   position: absolute;
   top: 30%;
   left: 25%;
+}
+.infomation-text {
+  margin: 50px;
+}
+p {
+  font-size: 18px;
+}
+
+.contact-info {
+  height: 100%;
+  width: 100%;
+  line-height: 200%;
+  text-align: center;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  background-color: black;
 }
 
 .info-enter, .info-leave-to {

@@ -1,24 +1,4 @@
 # my-profile
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+自己紹介サイト
+[![Image from Gyazo](https://i.gyazo.com/4ede1464545530e182e594c4231e6542.jpg)](https://gyazo.com/4ede1464545530e182e594c4231e6542)

@@ -13,7 +13,7 @@
     </a>
     <img src="@/assets/images/MyProtfolioImg.png" alt="MyProtfolio">
     <p><a href="https://sh-portfolio-site.com" target="_blank">My Profile</a></p>
-    <p class="tool">Vue.js</p>
+    <p class="tool">Vue.js + netlify</p>
   </div>
 </template>
 

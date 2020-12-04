@@ -15,6 +15,7 @@
   height: 200px;
   position: fixed;
   bottom: 0px;
+  opacity: 0.8;
   background-color: #708090;
 }
 .sns-icon-group {

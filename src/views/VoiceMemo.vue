@@ -7,13 +7,14 @@
           <p class="explanation-text">Web Speech APIによりChrome環境では音声入力が可能</p>
           <p class="explanation-text">Ruby on Railsを使用し作成。</p>
           <p class="explanation-text">インフラにはAWSを用いてデプロイしています。</p>
-          <p class="explanation-text">詳細はGitHubに掲載しています。</p>
+          <p class="explanation-text">詳細はGitHubに掲載しています。(サーバー停止中)</p>
           <p class="explanation-text">是非ご覧ください。（リンク先はGitHubです。）</p>
         </div>
       </transition>
       <font-awesome-icon :icon="['fab', 'github']" class="github-icon"></font-awesome-icon>
     </a>
     <img src="@/assets/images/VoiceMemo.png" alt="voicememo">
+    <h4 class="stop">サーバー停止中です。</h4>
     <p><a href="https://www.myvoicememo.com/" target="_blank">Voice Memo</a></p>
     <p class="tool">Ruby on Rails + AWS</p>
   </div>
@@ -84,12 +85,15 @@ a {
 }
 
 p {
-  margin-left: 20px;
+  margin: 0px 20px;
 }
 
 .tool {
   font-size: 14px;
   color: darkgray;
+}
+.stop {
+  margin: 0 2px;
 }
 .explanation {
   width: 500px;
@@ -104,6 +108,7 @@ p {
 .explanation-text {
   font-size: 18px;
   color: darkgray;
+  margin-top: 10px;
 }
 
 @media (max-width: 650px) {

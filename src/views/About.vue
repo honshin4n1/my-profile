@@ -15,7 +15,7 @@
         </div>
         <div class="text-group">
           <p style="width: 130px;">生年月日</p>
-          <p>1983/7/5 (37歳)</p>
+          <p>1983/7/5 (38歳)</p>
         </div>
         <div class="text-group">
           <p style="width: 130px;">現住所</p>

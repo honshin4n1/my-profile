@@ -23,7 +23,7 @@
         </div>
         <div class="text-group">
           <p style="width: 130px;">趣味</p>
-          <p>映画 漫画 カラオケ サッカー視聴</p>
+          <p>映画 漫画 サッカー視聴</p>
         </div>
         <!-- <div class="text-body">
         </div> -->
